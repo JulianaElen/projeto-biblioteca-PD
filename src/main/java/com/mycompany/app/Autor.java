@@ -1,10 +1,17 @@
+package com.mycompany.app;
+
+import java.util.ArrayList;
 import java.util.List;
 
-class Autor extends Pessoa {
+public class Autor extends Pessoa {
     private String nacionalidade;
+    private List<Livro> obrasPublicadas;
 
-    public Autor(String nacionalidade) {
+    // Construtor com nome e nacionalidade
+    public Autor(String nome, String nacionalidade) {
+        super(nome);
         this.nacionalidade = nacionalidade;
+        this.obrasPublicadas = new ArrayList<>();
     }
 
     public String getNacionalidade() {
@@ -16,10 +23,12 @@ class Autor extends Pessoa {
     }
 
     public List<Livro> getObrasPublicadas() {
-        return null;
+        return obrasPublicadas;
     }
 
     public List<Livro> getObrasPublicadasPorGenero(String genero) {
-        return null;
+        return obrasPublicadas.stream()
+            .filter(livro -> livro.getGenero().equalsIgnoreCase(genero))
+            .toList();
     }
 }

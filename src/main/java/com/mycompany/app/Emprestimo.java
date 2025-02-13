@@ -1,24 +1,32 @@
-import java.sql.Date;
+package com.mycompany.app;
+import java.time.LocalDate;
 
-class Emprestimo {
-    private Date dataRetirada;
-    private Date dataDevolucao;
+public class Emprestimo {
+    private LocalDate dataRetirada;
+    private LocalDate dataDevolucao;
     private Livro livro;
     private Usuario usuario;
 
-    public Date getDataRetirada() {
+    public Emprestimo(LocalDate dataRetirada, LocalDate dataDevolucao, Livro livro, Usuario usuario) {
+        this.dataRetirada = dataRetirada;
+        this.dataDevolucao = dataDevolucao;
+        this.livro = livro;
+        this.usuario = usuario;
+    }
+
+    public LocalDate getDataRetirada() {
         return dataRetirada;
     }
 
-    public void setDataRetirada(Date dataRetirada) {
+    public void setDataRetirada(LocalDate dataRetirada) {
         this.dataRetirada = dataRetirada;
     }
 
-    public Date getDataDevolucao() {
+    public LocalDate getDataDevolucao() {
         return dataDevolucao;
     }
 
-    public void setDataDevolucao(Date dataDevolucao) {
+    public void setDataDevolucao(LocalDate dataDevolucao) {
         this.dataDevolucao = dataDevolucao;
     }
 
