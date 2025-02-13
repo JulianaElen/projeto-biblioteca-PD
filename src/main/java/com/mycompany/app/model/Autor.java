@@ -28,7 +28,18 @@ public class Autor extends Pessoa {
 
     public List<Livro> getObrasPublicadasPorGenero(String genero) {
         return obrasPublicadas.stream()
-            .filter(livro -> livro.getGenero().equalsIgnoreCase(genero))
-            .toList();
+                .filter(livro -> livro.getGenero().equalsIgnoreCase(genero))
+                .toList();
+    }
+
+    @Override
+    public String getNome() {
+        return super.getNome();
+
+    }
+
+    @Override
+    public void setNome(String nome) {
+        super.setNome(nome);
     }
 }

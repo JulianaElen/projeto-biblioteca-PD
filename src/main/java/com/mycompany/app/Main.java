@@ -1,11 +1,6 @@
 package com.mycompany.app.model;
 
 import com.mycompany.app.model.Autor;
-
-import com.mycompany.app.model.Emprestimo;
-
-import com.mycompany.app.model.Livro;
-
 import com.mycompany.app.model.Usuario;
 
 import com.mycompany.app.model.Pessoa;
